@@ -1,8 +1,6 @@
 name: run main.py
 
-on:
-  schedule:
-    - cron: '30 16 * * *' # At 00:00 daily
+on: push
 
 jobs:
   build:
