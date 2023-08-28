@@ -189,10 +189,13 @@ def get_mal(mal_id, client_id):
 
 if __name__ == '__main__':
     anime_offline_database = requests.get("https://raw.githubusercontent.com/manami-project/anime-offline-database/master/anime-offline-database-minified.json").json()
+    print("Fetched anime-offline-database")
     anime_list_full = requests.get("https://raw.githubusercontent.com/Fribb/anime-lists/master/anime-list-mini.json").json()
+    print("Fetched anime-list-full")
 
     aniworld_session = requests.Session()
     html_page = aniworld_session.get("https://aniworld.to/animes-alphabet")
+    print(html_page.content)
     soup = BeautifulSoup(html_page.content, 'html.parser')
     series_container = soup.select_one('.genre > ul:nth-child(2)')
 
