@@ -1,1 +1,1 @@
-"# anime-list" 
+# Anime-List
